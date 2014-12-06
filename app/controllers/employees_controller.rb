@@ -2,8 +2,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employees = Employee.all
 
@@ -16,8 +16,8 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.find(params[:id])
 
@@ -30,8 +30,8 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   # GET /employees/new.json
   def new
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.new
 
@@ -43,8 +43,8 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.find(params[:id])
   end
@@ -52,8 +52,8 @@ class EmployeesController < ApplicationController
   # POST /employees
   # POST /employees.json
   def create
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.new(params[:employee])
 
@@ -71,8 +71,8 @@ class EmployeesController < ApplicationController
   # PUT /employees/1
   # PUT /employees/1.json
   def update
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.find(params[:id])
 
@@ -90,8 +90,8 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   # DELETE /employees/1.json
   def destroy
-    if session[:authorized].nil?
-	render :status => :forbidden, :text => "Forbidden"
+    if session[:authorized].nil? or session[:authorized] == false
+	render :status => :forbidden, :text => "Forbidden" and return
     end
     @employee = Employee.find(params[:id])
     @employee.destroy

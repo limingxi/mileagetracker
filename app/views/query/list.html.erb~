@@ -1,0 +1,19 @@
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>employeeid</th>
+    <th>distance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trackersqueried.each do |tracker| %>
+  <tr>
+    <td><%= tracker.id %></td>
+    <td><%= tracker.employee_id %></td>
+    <td><%= tracker.distance %></td>
+  </tr>
+<% end %>
+</table>
+<br />

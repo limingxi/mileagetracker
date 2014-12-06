@@ -1,0 +1,6 @@
+<div class="jumbotron">
+	<h1>Welcome!</h1>
+	<p>Please choose one action to continue: </p>
+	<a class="btn" href="/employees">Manage Employees</a>
+	<a class="btn" href="/query/index">Retrieve Data</a>
+</div>
