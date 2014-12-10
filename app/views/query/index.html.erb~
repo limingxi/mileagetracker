@@ -1,6 +1,7 @@
 <center>
 	<form action="/query/list">
-		<input name="datetime" type="date" data-date-format="mm/dd/yyyy">
+		<input name="start_date" type="date" data-date-format="mm/dd/yyyy">
+		<input name="end_date" type="date" data-date-format="mm/dd/yyyy">
 		<input type="submit">
 	</form>
 </center>

@@ -1,10 +1,12 @@
 <table border="1">
   <tr>
     <th>Id</th>
-    <th>employeeid</th>
+    <th>Name</th>
+    <th>From</th>
+    <th>To</th>
     <th>distance</th>
-    <th></th>
-    <th></th>
+    <th>date</th>
+    <th>price</th>
     <th></th>
   </tr>
 
@@ -12,7 +14,11 @@
   <tr>
     <td><%= tracker.id %></td>
     <td><%= tracker.name %></td>
+    <td><%= tracker.source %></td>
+    <td><%= tracker.dest %></td>
     <td><%= tracker.dist %></td>
+    <td><%= tracker.create_at %></td>
+    <td><%= 0.56*tracker.dist %></td>
   </tr>
 <% end %>
 </table>
