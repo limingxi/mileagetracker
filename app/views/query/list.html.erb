@@ -28,9 +28,9 @@
     <td><%= tracker.name %></td>
     <td><%= tracker.source %></td>
     <td><%= tracker.dest %></td>
-    <td><%= tracker.dist %></td>
+    <td><%= 0.00062*tracker.dist %></td>
     <td><%= tracker.create_at %></td>
-    <td><%= 0.56*tracker.dist %></td>
+    <td><%= 0.56*0.00062*tracker.dist %></td>
   </tr>
 <% end %>
 </table>
